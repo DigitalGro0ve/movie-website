@@ -28,11 +28,18 @@ h2{
     display: flex;
     justify-content: center;
 }
-.row{
+.section{
     display: flex;
     justify-content: space-evenly;
+  
+}
+.movie_card{
+    border-style: dotted;
+    border-color: blue;
+    border-radius: 20%;
 }
 img{
+    border-radius: 20%;
     width: 200px;
 }
 
@@ -46,4 +53,7 @@ footer{
 }
 .swiper{
     width: 950px;
+}
+.carousel, .slide {
+    width: 500px;
 }
