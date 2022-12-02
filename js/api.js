@@ -12,7 +12,6 @@ export async function getMovies() {
   return data.results;
 }
 
-// https://api.themoviedb.org/3/movie/343611?api_key=3fd2be6f0c70a2a598f084ddfb75487c
 export async function getMovieInfo(id) {
   const fullURL = BASE_URL + "/movie/" + id + "?&api_key=" + API_KEY;
 
