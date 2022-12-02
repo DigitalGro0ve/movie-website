@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/movie.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <title>My Movies Website</title>
+  </head>
+  <body class="main-body">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="root">
+        <div >
+            <img id="mainImage" class="main-image"></img>
+            <div id="title"  class="title"></div>
+        </div>
+    </div>
+
+    <footer></footer>
+  </body>
+
+  <script type="module">
+    import { getMovieInfo } from "./js/api.js";
+    let params = new URLSearchParams(window.location.search);
+    let movieID = params.get("id");
+    
+    let movieInfo = await getMovieInfo(movieID);
+    console.log(movieInfo);
+    
+
+    const mainImage = document.getElementById("mainImage");
+    mainImage.setAttribute("src", "https://image.tmdb.org/t/p/w500"+ movieInfo.poster_path)
+
+    const title = document.getElementById("title");
+    title.innerHTML = movieInfo.title
+
+  </script>
+</html>

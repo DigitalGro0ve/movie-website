@@ -1,0 +1,38 @@
+li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 40px;
+  color: brown;
+  font-size: 30px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #1d2124;
+  border-radius: 8px;
+  /* height: 80px; */
+}
+header ul {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* display: flex; */
+}
+header li {
+  background-color: #f68c1e;
+  padding: 8px;
+  border-radius: 8px;
+}
+header a:hover {
+  color: blueviolet;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-body {
+  background-color: #050809;
+  color: white;
+}

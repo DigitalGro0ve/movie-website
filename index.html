@@ -4,175 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <!-- bootstrap link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <title>My Movies Website</title>
   </head>
-  <body>
-    <!-- header -->
+  <body class="main-body">
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="movies.html">Movies</a></li>
-          <li><a href="favourites.html">Favourites</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="/about.html">About</a></li>
         </ul>
       </nav>
     </header>
-    <!-- main slider -->
-    <!-- <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/src/img/0524BE_3.jpg" class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/src/img/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_240x360_crop_center.progressive.webp"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img src="/src/img/235857.jpg" class="d-block w-100" alt="..." />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div> -->
-    <!-- movies with high ratings -->
-    <h2>Top 10 movies</h2>
-    <div class="swiper mySwiper container">
-      <div class="swiper-wrapper section">
-        <div class="swiper-slide movie_card col-3">
-          <img
-            src="src/img/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_240x360_crop_center.progressive.webp"
-            alt="img1"
-          />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/black-panther-web.jpg" alt="img2" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/blade_runner_2049_17_u.webp" alt="img3" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/download.jpg" alt="img4" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/0524BE_3.jpg" alt="img5" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/71BPuv+iRbL.jpg" alt="img6" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/images.jpg" alt="img7" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/download (1).jpg" alt="img8" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/images (1).jpg" alt="img9" />
-          <h2>movie name</h2>
-        </div>
-        <div class="swiper-slide movie_card">
-          <img src="src/img/the-batman-movie-poster-md.jpg" alt="img10" />
-          <h2>movie name</h2>
-        </div>
-      </div>
+
+    <div class="root">
+      <div class="movie-list-title">Top Movies</div>
+      <div id="topMovies" class="movie-list"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-    <h2>Top 10 series</h2>
 
     <footer></footer>
-    <!-- <script type="text/javascript" src="script.js"></script> -->
-    <script type="module">
-      import { getMovies, getMovies3 } from "./api.js";
-      getMovies();
-    </script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        slidesPerGroup: 4,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
   </body>
+
+  <script type="module">
+    import { getMovies } from "./js/api.js";
+
+    let movieList = await getMovies();
+
+    movieList.map((curMovie) => {
+      const movieCard = document.createElement("div");
+      movieCard.className = "card";
+
+      // make link for movie card
+      const link = document.createElement("a");
+      link.setAttribute("href", "/movie.html?id=" + curMovie.id);
+      link.setAttribute("data-navigo", "");
+
+      // make title & image for movie card
+      const h1 = document.createElement("h1");
+      h1.textContent = curMovie.title;
+      const img = document.createElement("img");
+      img.width = 200;
+      img.src = "https://image.tmdb.org/t/p/w500" + curMovie.poster_path;
+
+      link.appendChild(img);
+      link.appendChild(h1);
+      movieCard.appendChild(link);
+
+      const cardDeck = document.getElementById("topMovies");
+      cardDeck.appendChild(movieCard);
+    });
+  </script>
 </html>
