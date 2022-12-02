@@ -27,7 +27,10 @@
       </div>
       <div class="right">
         <div id="title" class="title"></div>
+        Description:
         <div id="description" class="description"></div>
+
+        <div id="tags" class="tags">Genres:</div>
       </div>
     </div>
 
@@ -41,7 +44,6 @@
     let movieID = params.get("id");
 
     let movieInfo = await getMovieInfo(movieID);
-    console.log(movieInfo);
 
     const mainImage = document.getElementById("mainImage");
     mainImage.setAttribute(
@@ -53,5 +55,18 @@
     title.innerHTML = movieInfo.title;
     const description = document.getElementById("description");
     description.innerHTML = movieInfo.overview;
+
+    const tags = document.getElementById("tags");
+
+    movieInfo.genres.map((curGenre) => {
+      const genreLink = document.createElement("a");
+      genreLink.className = "tag";
+      genreLink.setAttribute("href", "/movies.html?genre=" + curGenre.id);
+
+      genreLink.innerHTML = curGenre.name;
+      tags.appendChild(genreLink);
+    });
+
+    // tags.innerHTML = movieInfo.genres;
   </script>
 </html>
